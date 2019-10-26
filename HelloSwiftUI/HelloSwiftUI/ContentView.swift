@@ -11,7 +11,7 @@ import SwiftUI
 func randomHanzi() -> String {
     let code = Int.random(in: 0x4e00 ... 0x9fff)
     if let scalar = UnicodeScalar(code) {
-      return String(scalar)
+        return String(scalar)
     } else {
         return "N/A"
     }
@@ -19,11 +19,20 @@ func randomHanzi() -> String {
 
 struct ContentView: View {
     @State var text = "你好世界！"
+    @State var counter = 0
+    
+    var timer: Timer {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            self.counter += 1
+        }
+    }
     
     var body: some View {
         VStack {
-            Text("\(text)").font(.system(size: 48))
-            Divider()
+            Text("\(text)")
+                .font(.system(size: 48))
+                .padding(.bottom)
+            
             Button(action: {
                 self.text = String(randomHanzi())
                 print("what")
@@ -35,6 +44,13 @@ struct ContentView: View {
                     .cornerRadius(20)
                     .foregroundColor(.white)
             }
+            Divider()
+            Text("Current time")
+            Text("\(counter)")
+                .font(.title)
+                .onAppear(perform: {
+                    _ = self.timer
+                })
         }
     }
 }
