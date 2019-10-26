@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7359B90236510A700515CE4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7359B8F236510A700515CE4 /* AVFoundation.framework */; };
 		A7B2FAF62364DC21006F59B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2FAF52364DC21006F59B2 /* AppDelegate.swift */; };
 		A7B2FAF82364DC21006F59B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2FAF72364DC21006F59B2 /* SceneDelegate.swift */; };
 		A7B2FAFA2364DC21006F59B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2FAF92364DC21006F59B2 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7359B8F236510A700515CE4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A7B2FAF22364DC21006F59B2 /* HelloSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B2FAF52364DC21006F59B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7B2FAF72364DC21006F59B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7359B90236510A700515CE4 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7359B8E236510A700515CE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7359B8F236510A700515CE4 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A7B2FAE92364DC21006F59B2 = {
 			isa = PBXGroup;
 			children = (
 				A7B2FAF42364DC21006F59B2 /* HelloSwiftUI */,
 				A7B2FAF32364DC21006F59B2 /* Products */,
+				A7359B8E236510A700515CE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

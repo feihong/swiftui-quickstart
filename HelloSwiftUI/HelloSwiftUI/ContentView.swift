@@ -6,6 +6,7 @@
 //  Copyright © 2019 Feihong Hsu. All rights reserved.
 //
 
+import AVFoundation
 import SwiftUI
 
 func randomHanzi() -> String {
@@ -34,17 +35,22 @@ struct ContentView: View {
         return res
     }
     
+    func onButtonClick() {
+        self.text = String(randomHanzi())
+        
+        let synthesizer = AVSpeechSynthesizer()
+        let utterance = AVSpeechUtterance(string: "Hello world")
+        synthesizer.speak(utterance)
+    }
+    
     var body: some View {
         VStack {
             Text("\(text)")
                 .font(.system(size: 48))
                 .padding(.bottom)
             
-            Button(action: {
-                self.text = String(randomHanzi())
-                print("what")
-            }) {
-                Text("Click me now!")
+            Button(action: onButtonClick) {
+                Text("Show me 汉字!")
                     .font(.title)
                     .padding()
                     .background(Color.blue)
@@ -55,10 +61,10 @@ struct ContentView: View {
             Text("Current time")
             Text(dateFormatter.string(from: self.now))
                 .font(.title)
-                .onAppear(perform: {
-                    _ = self.timer
-                })
-        }
+                
+        }.onAppear(perform: {
+            _ = self.timer
+        })
     }
 }
 
