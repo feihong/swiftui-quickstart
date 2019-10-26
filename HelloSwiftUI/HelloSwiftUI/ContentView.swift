@@ -22,7 +22,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("\(text)").font(.largeTitle)
+            Text("\(text)").font(.system(size: 48))
             Divider()
             Button(action: {
                 self.text = String(randomHanzi())
