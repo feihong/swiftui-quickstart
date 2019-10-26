@@ -17,14 +17,21 @@ func randomHanzi() -> String {
     }
 }
 
+
 struct ContentView: View {
     @State var text = "你好世界！"
-    @State var counter = 0
+    @State var now = Date()
     
     var timer: Timer {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            self.counter += 1
+            self.now = Date()
         }
+    }
+    
+    var dateFormatter: DateFormatter {
+        let res = DateFormatter()
+        res.dateFormat = "hh:mm:ss a"
+        return res
     }
     
     var body: some View {
@@ -46,7 +53,7 @@ struct ContentView: View {
             }
             Divider()
             Text("Current time")
-            Text("\(counter)")
+            Text(dateFormatter.string(from: self.now))
                 .font(.title)
                 .onAppear(perform: {
                     _ = self.timer
