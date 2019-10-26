@@ -35,12 +35,16 @@ struct ContentView: View {
         return res
     }
     
+    let synthesizer = AVSpeechSynthesizer()
+    
     func onButtonClick() {
         self.text = String(randomHanzi())
         
-        let synthesizer = AVSpeechSynthesizer()
-        let utterance = AVSpeechUtterance(string: "Hello world")
-        synthesizer.speak(utterance)
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: self.now) % 12
+        let minute = calendar.component(.minute, from: self.now)
+        let utterance = AVSpeechUtterance(string: "\(hour) \(minute)")
+        self.synthesizer.speak(utterance)
     }
     
     var body: some View {
