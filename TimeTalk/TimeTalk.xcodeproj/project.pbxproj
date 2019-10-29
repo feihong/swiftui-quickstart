@@ -7,120 +7,122 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7B2FAF62364DC21006F59B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2FAF52364DC21006F59B2 /* AppDelegate.swift */; };
-		A7B2FAF82364DC21006F59B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2FAF72364DC21006F59B2 /* SceneDelegate.swift */; };
-		A7B2FAFA2364DC21006F59B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2FAF92364DC21006F59B2 /* ContentView.swift */; };
-		A7B2FAFC2364DC25006F59B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B2FAFB2364DC25006F59B2 /* Assets.xcassets */; };
-		A7B2FAFF2364DC25006F59B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B2FAFE2364DC25006F59B2 /* Preview Assets.xcassets */; };
-		A7B2FB022364DC25006F59B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7B2FB002364DC25006F59B2 /* LaunchScreen.storyboard */; };
+		A769FBE02367E7C500ACBF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769FBDF2367E7C500ACBF40 /* AppDelegate.swift */; };
+		A769FBE22367E7C500ACBF40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769FBE12367E7C500ACBF40 /* SceneDelegate.swift */; };
+		A769FBE42367E7C500ACBF40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769FBE32367E7C500ACBF40 /* ContentView.swift */; };
+		A769FBE62367E7C600ACBF40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A769FBE52367E7C600ACBF40 /* Assets.xcassets */; };
+		A769FBE92367E7C600ACBF40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A769FBE82367E7C600ACBF40 /* Preview Assets.xcassets */; };
+		A769FBEC2367E7C600ACBF40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A769FBEA2367E7C600ACBF40 /* LaunchScreen.storyboard */; };
+		A769FBF52367E82100ACBF40 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A769FBF42367E82100ACBF40 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A7359B8F236510A700515CE4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A7B2FAF22364DC21006F59B2 /* HelloSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7B2FAF52364DC21006F59B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7B2FAF72364DC21006F59B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A7B2FAF92364DC21006F59B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A7B2FAFB2364DC25006F59B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A7B2FAFE2364DC25006F59B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A7B2FB012364DC25006F59B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A7B2FB032364DC25006F59B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A769FBDC2367E7C500ACBF40 /* TimeTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A769FBDF2367E7C500ACBF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A769FBE12367E7C500ACBF40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A769FBE32367E7C500ACBF40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A769FBE52367E7C600ACBF40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A769FBE82367E7C600ACBF40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A769FBEB2367E7C600ACBF40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A769FBED2367E7C600ACBF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A769FBF42367E82100ACBF40 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A7B2FAEF2364DC21006F59B2 /* Frameworks */ = {
+		A769FBD92367E7C500ACBF40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A769FBF52367E82100ACBF40 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A7359B8E236510A700515CE4 /* Frameworks */ = {
+		A769FBD32367E7C500ACBF40 = {
 			isa = PBXGroup;
 			children = (
-				A7359B8F236510A700515CE4 /* AVFoundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A7B2FAE92364DC21006F59B2 = {
-			isa = PBXGroup;
-			children = (
-				A7B2FAF42364DC21006F59B2 /* HelloSwiftUI */,
-				A7B2FAF32364DC21006F59B2 /* Products */,
-				A7359B8E236510A700515CE4 /* Frameworks */,
+				A769FBDE2367E7C500ACBF40 /* TimeTalk */,
+				A769FBDD2367E7C500ACBF40 /* Products */,
+				A769FBF32367E82100ACBF40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		A7B2FAF32364DC21006F59B2 /* Products */ = {
+		A769FBDD2367E7C500ACBF40 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7B2FAF22364DC21006F59B2 /* HelloSwiftUI.app */,
+				A769FBDC2367E7C500ACBF40 /* TimeTalk.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A7B2FAF42364DC21006F59B2 /* HelloSwiftUI */ = {
+		A769FBDE2367E7C500ACBF40 /* TimeTalk */ = {
 			isa = PBXGroup;
 			children = (
-				A7B2FAF52364DC21006F59B2 /* AppDelegate.swift */,
-				A7B2FAF72364DC21006F59B2 /* SceneDelegate.swift */,
-				A7B2FAF92364DC21006F59B2 /* ContentView.swift */,
-				A7B2FAFB2364DC25006F59B2 /* Assets.xcassets */,
-				A7B2FB002364DC25006F59B2 /* LaunchScreen.storyboard */,
-				A7B2FB032364DC25006F59B2 /* Info.plist */,
-				A7B2FAFD2364DC25006F59B2 /* Preview Content */,
+				A769FBDF2367E7C500ACBF40 /* AppDelegate.swift */,
+				A769FBE12367E7C500ACBF40 /* SceneDelegate.swift */,
+				A769FBE32367E7C500ACBF40 /* ContentView.swift */,
+				A769FBE52367E7C600ACBF40 /* Assets.xcassets */,
+				A769FBEA2367E7C600ACBF40 /* LaunchScreen.storyboard */,
+				A769FBED2367E7C600ACBF40 /* Info.plist */,
+				A769FBE72367E7C600ACBF40 /* Preview Content */,
 			);
-			path = HelloSwiftUI;
+			path = TimeTalk;
 			sourceTree = "<group>";
 		};
-		A7B2FAFD2364DC25006F59B2 /* Preview Content */ = {
+		A769FBE72367E7C600ACBF40 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				A7B2FAFE2364DC25006F59B2 /* Preview Assets.xcassets */,
+				A769FBE82367E7C600ACBF40 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A769FBF32367E82100ACBF40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A769FBF42367E82100ACBF40 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A7B2FAF12364DC21006F59B2 /* HelloSwiftUI */ = {
+		A769FBDB2367E7C500ACBF40 /* TimeTalk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7B2FB062364DC25006F59B2 /* Build configuration list for PBXNativeTarget "HelloSwiftUI" */;
+			buildConfigurationList = A769FBF02367E7C600ACBF40 /* Build configuration list for PBXNativeTarget "TimeTalk" */;
 			buildPhases = (
-				A7B2FAEE2364DC21006F59B2 /* Sources */,
-				A7B2FAEF2364DC21006F59B2 /* Frameworks */,
-				A7B2FAF02364DC21006F59B2 /* Resources */,
+				A769FBD82367E7C500ACBF40 /* Sources */,
+				A769FBD92367E7C500ACBF40 /* Frameworks */,
+				A769FBDA2367E7C500ACBF40 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HelloSwiftUI;
-			productName = HelloSwiftUI;
-			productReference = A7B2FAF22364DC21006F59B2 /* HelloSwiftUI.app */;
+			name = TimeTalk;
+			productName = TimeTalk;
+			productReference = A769FBDC2367E7C500ACBF40 /* TimeTalk.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A7B2FAEA2364DC21006F59B2 /* Project object */ = {
+		A769FBD42367E7C500ACBF40 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Feihong Hsu";
 				TargetAttributes = {
-					A7B2FAF12364DC21006F59B2 = {
+					A769FBDB2367E7C500ACBF40 = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
-			buildConfigurationList = A7B2FAED2364DC21006F59B2 /* Build configuration list for PBXProject "HelloSwiftUI" */;
+			buildConfigurationList = A769FBD72367E7C500ACBF40 /* Build configuration list for PBXProject "TimeTalk" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,47 +130,47 @@
 				en,
 				Base,
 			);
-			mainGroup = A7B2FAE92364DC21006F59B2;
-			productRefGroup = A7B2FAF32364DC21006F59B2 /* Products */;
+			mainGroup = A769FBD32367E7C500ACBF40;
+			productRefGroup = A769FBDD2367E7C500ACBF40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7B2FAF12364DC21006F59B2 /* HelloSwiftUI */,
+				A769FBDB2367E7C500ACBF40 /* TimeTalk */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A7B2FAF02364DC21006F59B2 /* Resources */ = {
+		A769FBDA2367E7C500ACBF40 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B2FB022364DC25006F59B2 /* LaunchScreen.storyboard in Resources */,
-				A7B2FAFF2364DC25006F59B2 /* Preview Assets.xcassets in Resources */,
-				A7B2FAFC2364DC25006F59B2 /* Assets.xcassets in Resources */,
+				A769FBEC2367E7C600ACBF40 /* LaunchScreen.storyboard in Resources */,
+				A769FBE92367E7C600ACBF40 /* Preview Assets.xcassets in Resources */,
+				A769FBE62367E7C600ACBF40 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A7B2FAEE2364DC21006F59B2 /* Sources */ = {
+		A769FBD82367E7C500ACBF40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B2FAF62364DC21006F59B2 /* AppDelegate.swift in Sources */,
-				A7B2FAF82364DC21006F59B2 /* SceneDelegate.swift in Sources */,
-				A7B2FAFA2364DC21006F59B2 /* ContentView.swift in Sources */,
+				A769FBE02367E7C500ACBF40 /* AppDelegate.swift in Sources */,
+				A769FBE22367E7C500ACBF40 /* SceneDelegate.swift in Sources */,
+				A769FBE42367E7C500ACBF40 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A7B2FB002364DC25006F59B2 /* LaunchScreen.storyboard */ = {
+		A769FBEA2367E7C600ACBF40 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A7B2FB012364DC25006F59B2 /* Base */,
+				A769FBEB2367E7C600ACBF40 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -176,7 +178,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A7B2FB042364DC25006F59B2 /* Debug */ = {
+		A769FBEE2367E7C600ACBF40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +238,7 @@
 			};
 			name = Debug;
 		};
-		A7B2FB052364DC25006F59B2 /* Release */ = {
+		A769FBEF2367E7C600ACBF40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -290,40 +292,40 @@
 			};
 			name = Release;
 		};
-		A7B2FB072364DC25006F59B2 /* Debug */ = {
+		A769FBF12367E7C600ACBF40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HelloSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TimeTalk/Preview Content\"";
 				DEVELOPMENT_TEAM = KUC2C7UHNK;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = HelloSwiftUI/Info.plist;
+				INFOPLIST_FILE = TimeTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.feihonghsu.HelloSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feihonghsu.TimeTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A7B2FB082364DC25006F59B2 /* Release */ = {
+		A769FBF22367E7C600ACBF40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HelloSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TimeTalk/Preview Content\"";
 				DEVELOPMENT_TEAM = KUC2C7UHNK;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = HelloSwiftUI/Info.plist;
+				INFOPLIST_FILE = TimeTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.feihonghsu.HelloSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feihonghsu.TimeTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,25 +335,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A7B2FAED2364DC21006F59B2 /* Build configuration list for PBXProject "HelloSwiftUI" */ = {
+		A769FBD72367E7C500ACBF40 /* Build configuration list for PBXProject "TimeTalk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7B2FB042364DC25006F59B2 /* Debug */,
-				A7B2FB052364DC25006F59B2 /* Release */,
+				A769FBEE2367E7C600ACBF40 /* Debug */,
+				A769FBEF2367E7C600ACBF40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7B2FB062364DC25006F59B2 /* Build configuration list for PBXNativeTarget "HelloSwiftUI" */ = {
+		A769FBF02367E7C600ACBF40 /* Build configuration list for PBXNativeTarget "TimeTalk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7B2FB072364DC25006F59B2 /* Debug */,
-				A7B2FB082364DC25006F59B2 /* Release */,
+				A769FBF12367E7C600ACBF40 /* Debug */,
+				A769FBF22367E7C600ACBF40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A7B2FAEA2364DC21006F59B2 /* Project object */;
+	rootObject = A769FBD42367E7C500ACBF40 /* Project object */;
 }
