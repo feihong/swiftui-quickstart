@@ -17,14 +17,14 @@ func randomHanzi() -> String {
     }
 }
 
-let availableNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let availableNumbers = Array(1...10)
 
 struct ContentView: View {
     @State var text = "你好世界！"
-    @State var num = 1
+    @State var selectedNumber = 0
     
     func onButtonClick() {
-        let hanziList = Array.init(repeating: 0, count: self.num)
+        let hanziList = Array.init(repeating: 0, count: availableNumbers[self.selectedNumber])
             .map { _ in randomHanzi() }
         self.text = hanziList.joined()
     }
@@ -34,18 +34,17 @@ struct ContentView: View {
             Text("\(text)")
                 .font(Font.system(size: 48))
             
-            Text("Number of hanzi: \(num)").padding(.bottom)
-                .contextMenu {
-                    ForEach(availableNumbers, id: \.self) { number in
-                        Button(action: { self.num = number }) {
-                            Text("\(number)")
-                        }
-                    }
+            Text("Number of hanzi: \(availableNumbers[self.selectedNumber])")
+            Picker(selection: $selectedNumber, label: Text("Number of hanzi")) {
+                ForEach(0 ..< availableNumbers.count)  {
+                    Text(String(availableNumbers[$0]))
                 }
+            }
+            .labelsHidden()
             
             Button(action: onButtonClick) {
                 Text("Show me 汉字")
-                    .font(Font.title)
+                    .font(.title)
                     .padding()
                     .background(Color.orange)
                     .cornerRadius(20)
