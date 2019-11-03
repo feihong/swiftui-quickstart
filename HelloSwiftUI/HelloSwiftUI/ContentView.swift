@@ -41,6 +41,7 @@ struct ContentView: View {
                 }
             }
             .labelsHidden()
+            .pickerStyle(WheelPickerStyle())
             
             Button(action: onButtonClick) {
                 Text("Show me 汉字")
