@@ -17,10 +17,13 @@ func randomHanzi() -> String {
     }
 }
 
+let characterTypes = ["Hieroglyphics", "Hanzi"]
+
 let availableNumbers = Array(1...10)
 
 struct ContentView: View {
-    @State var text = "你好世界！"
+    @State var text = ""
+    @State var selectedType = 0
     @State var selectedNumber = 0
     
     func updateText() {
@@ -33,20 +36,25 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section {
-                    Text("\(text)")
+                    Text(self.text)
                     .font(Font.system(size: 48))
                 }
                 
                 Section {
-                    Picker(selection: $selectedNumber, label: Text("Number of hanzi")) {
-                        ForEach(0 ..< availableNumbers.count, id: \.self)  { index in
-                            Text(String(availableNumbers[index])).tag(index)
+                    Picker(selection: $selectedType, label: Text("Character type")) {
+                        ForEach(0 ..< characterTypes.count) {
+                            Text(characterTypes[$0])
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                    
+                    Picker(selection: $selectedNumber, label: Text("Number of characters")) {
+                        ForEach(0 ..< availableNumbers.count)  { index in
+                            Text(String(availableNumbers[index]))
                         }
                     }
-                    .pickerStyle(SegmentedPickerStyle())                    
                     
                     Button(action: updateText) {
-                        Text("Update hanzi")
+                        Text("Update")
                     }
                 }
             }
