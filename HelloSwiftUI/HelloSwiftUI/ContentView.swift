@@ -23,35 +23,37 @@ struct ContentView: View {
     @State var text = "你好世界！"
     @State var selectedNumber = 0
     
-    func onButtonClick() {
+    func updateText() {
         let hanziList = Array.init(repeating: 0, count: availableNumbers[self.selectedNumber])
             .map { _ in randomHanzi() }
         self.text = hanziList.joined()
     }
     
     var body: some View {
-        VStack {
-            Text("\(text)")
-                .font(Font.system(size: 48))
-            
-            Text("Number of hanzi: \(availableNumbers[self.selectedNumber])")
-            Picker(selection: $selectedNumber, label: Text("Number of hanzi")) {
-                ForEach(0 ..< availableNumbers.count)  {
-                    Text(String(availableNumbers[$0]))
+        NavigationView {
+            Form {
+                Section {
+                    Text("\(text)")
+                    .font(Font.system(size: 48))
+                }
+                
+                Section {
+                    Picker(selection: $selectedNumber, label: Text("Number of hanzi")) {
+                        ForEach(0 ..< availableNumbers.count, id: \.self)  { index in
+                            Text(String(availableNumbers[index])).tag(index)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())                    
+                    
+                    Button(action: updateText) {
+                        Text("Update hanzi")
+                    }
                 }
             }
-            .labelsHidden()
-            .pickerStyle(WheelPickerStyle())
-            
-            Button(action: onButtonClick) {
-                Text("Show me 汉字")
-                    .font(.title)
-                    .padding()
-                    .background(Color.orange)
-                    .cornerRadius(20)
-                    .foregroundColor(.white)
-            }
-        }
+        }.onAppear(perform: {
+            print("onAppear")
+            self.updateText()
+        })
     }
 }
 
