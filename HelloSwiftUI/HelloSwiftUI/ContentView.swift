@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-func randomHanzi() -> String {
-    let code = Int.random(in: 0x4e00 ... 0x9fff)
+func randomChar(low: Int, high: Int) -> String {
+    let code = Int.random(in: low ... high)
     if let scalar = UnicodeScalar(code) {
         return String(scalar)
     } else {
@@ -17,18 +17,47 @@ func randomHanzi() -> String {
     }
 }
 
-let characterTypes = ["Hieroglyphics", "Hanzi"]
+func randomHanzi() -> String {
+    randomChar(low: 0x4e00, high: 0x9fff)
+}
+
+func randomHangul() -> String {
+    randomChar(low: 0xAC00, high: 0xD7AF)
+}
+
+func randomHieroglyphic() -> String {
+    randomChar(low: 0x13000, high: 0x1342E)
+}
+
+enum WritingSystem : String {
+    case Hieroglyphics
+    case Hangul
+    case Hanzi
+}
+
+let writingSystems = [WritingSystem.Hieroglyphics, .Hangul, .Hanzi]
 
 let availableNumbers = Array(1...10)
 
 struct ContentView: View {
     @State var text = ""
-    @State var selectedType = 0
+    @State var selectedSystem = 0
     @State var selectedNumber = 0
     
     func updateText() {
+        var randomFunc = randomHieroglyphic
+            
+        switch writingSystems[self.selectedSystem] {
+        case .Hieroglyphics:
+            randomFunc = randomHieroglyphic
+        case .Hangul:
+            randomFunc = randomHangul
+        case .Hanzi:
+            randomFunc = randomHanzi
+        }
+        
         let hanziList = Array.init(repeating: 0, count: availableNumbers[self.selectedNumber])
-            .map { _ in randomHanzi() }
+            .map { _ in randomFunc() }
         self.text = hanziList.joined()
     }
     
@@ -41,9 +70,9 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Picker(selection: $selectedType, label: Text("Character type")) {
-                        ForEach(0 ..< characterTypes.count) {
-                            Text(characterTypes[$0])
+                    Picker(selection: $selectedSystem, label: Text("Character type")) {
+                        ForEach(0 ..< writingSystems.count) {
+                            Text(writingSystems[$0].rawValue)
                         }
                     }.pickerStyle(SegmentedPickerStyle())
                     
